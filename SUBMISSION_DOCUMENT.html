@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CardioVex (CVX-409) Clinical Trial Protocol Assistant - Submission Report</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --primary-light: #2b6cb0;
+    --secondary: #2c5282;
+    --accent: #319795;
+    --success: #22543d;
+    --success-bg: #f0fff4;
+    --warning: #744210;
+    --warning-bg: #fffaf0;
+    --danger: #742a2a;
+    --danger-bg: #fff5f5;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --text: #2d3748;
+    --text-muted: #718096;
+    --border: #e2e8f0;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    margin: 0;
+    padding: 30px 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+  .header {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    color: var(--primary);
+    margin: 0 0 10px 0;
+    font-size: 26px;
+  }
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .badge-success { background: #c6f6d5; color: #22543d; }
+  .badge-refusal { background: #fed7d7; color: #742a2a; }
+  h2 {
+    color: var(--secondary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-top: 35px;
+    font-size: 20px;
+  }
+  h3 {
+    color: var(--text);
+    margin-top: 25px;
+    font-size: 16px;
+  }
+  pre, code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 13px;
+  }
+  pre {
+    background: #1a202c;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  .qa-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-left: 4px solid var(--primary-light);
+  }
+  .qa-card.refusal {
+    border-left: 4px solid #e53e3e;
+  }
+  .qa-title {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user-q {
+    background: #edf2f7;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .model-a {
+    background: #f7fafc;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid #edf2f7;
+    font-family: monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+  }
+  .meta-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  .meta-table th, .meta-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+    font-size: 14px;
+  }
+  .meta-table th {
+    background: #f7fafc;
+    color: var(--primary);
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .container { box-shadow: none; border: none; padding: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>CardioVex (CVX-409) Clinical Trial Protocol Assistant</h1>
+    <div class="subtitle">Official Assessment Corpus Evaluation & RAG Pipeline Submission Report</div>
+  </div>
+
+  <h2>1. Executive Summary & Verification Details</h2>
+  <table class="meta-table">
+    <tr>
+      <th>Parameter</th>
+      <th>Document Specification</th>
+    </tr>
+    <tr>
+      <td><strong>Protocol File</strong></td>
+      <td><code>cardiovex_clinical_trial_protocol_50p.pdf</code></td>
+    </tr>
+    <tr>
+      <td><strong>Total Volume</strong></td>
+      <td>50 Pages (5 Chapters, 50 Modules)</td>
+    </tr>
+    <tr>
+      <td><strong>Boilerplate Proportion</strong></td>
+      <td>94% (47 pages of generic administrative filler)</td>
+    </tr>
+    <tr>
+      <td><strong>Operational Targets</strong></td>
+      <td>Page 14 (Sec 4.1), Page 28 (Sec 7.3), Page 42 (Sec 10.2)</td>
+    </tr>
+    <tr>
+      <td><strong>Evaluation Score</strong></td>
+      <td>5 / 5 (100% Precision, Strict Grounding & Complete Refusal Compliance)</td>
+    </tr>
+  </table>
+
+  <h2>2. System Prompt Formulation</h2>
+  <pre><code>You are the CardioVex (CVX-409) Clinical Trial Protocol &amp; Pharmacovigilance Assistant. You answer questions strictly from the retrieved context of the "CardioVex (CVX-409) Phase-3 Multicenter Clinical Trial Protocol" (50 pages). You support trial site staff, investigators, coordinators and auditors.
+
+## CORE RULES
+1. GROUNDING: Answer ONLY from the retrieved protocol excerpts provided in the context. Never use outside knowledge, assumptions, or general medical knowledge to fill gaps.
+2. NUMERICAL ACCURACY: Quote thresholds, time limits, temperature ranges and units exactly as written in the protocol. Never round, convert, or infer values.
+3. CITATIONS: Every answer must cite the protocol page number and section (e.g., "Page 14, Section 4.1"). If several chunks support the answer, cite all of them.
+4. BOILERPLATE FILTERING: Much of the protocol consists of generic filler text ("Overview", "Standard Procedural Guidelines", "Archival &amp; Verification Notes"). These sections contain no quantitative facts. Prioritize chunks containing explicit numerical thresholds or procedures (e.g., sections marked "Operational Compliance Note").
+5. OUT-OF-SCOPE HANDLING: If the answer is not explicitly in the retrieved context, do NOT guess. Reply:
+   "This information is not available in the CardioVex (CVX-409) Phase-3 protocol provided, so I cannot answer it from this document."
+   Then briefly state what the protocol does cover and, where relevant, suggest the proper source (e.g., sponsor, pharmacy, prescribing information, or a licensed clinician).
+6. NO MEDICAL ADVICE: Do not give dosing, prescribing, or treatment recommendations for any drug that is not described in the protocol. Do not give commercial, pricing, or market information unless it is in the protocol.
+7. NO HALLUCINATION: Never invent page numbers, section numbers, contacts, or values.
+
+## ANSWER FORMAT
+- Line 1: Direct answer (one sentence, with exact value and unit).
+- Line 2: Source: Page X, Section Y.
+- Line 3 (optional): One short sentence of relevant context from the same section (e.g., exclusion rule, "do not freeze").
+- Keep answers concise and professional. No speculation.</code></pre>
+
+  <h2>3. Questions and Verified Model Outputs</h2>
+
+  <div class="qa-card">
+    <div class="qa-title">
+      <span>Question 1: Patient Eligibility / Renal Function</span>
+      <span class="badge badge-success">Grounded Pass</span>
+    </div>
+    <div class="user-q">What is the minimum required estimated Glomerular Filtration Rate (eGFR) threshold for a patient to be included in the CardioVex Phase III trial?</div>
+    <div class="model-a">The minimum baseline eGFR is 45 mL/min/1.73m² (CKD-EPI creatinine equation); patients below 45 are strictly excluded.
+Source: Page 14, Section 4.1.</div>
+  </div>
+
+  <div class="qa-card">
+    <div class="qa-title">
+      <span>Question 2: Serious Adverse Event (SAE) Reporting Timeline</span>
+      <span class="badge badge-success">Grounded Pass</span>
+    </div>
+    <div class="user-q">Within how many hours of becoming aware of a Serious Adverse Event (SAE) must a site investigator report it to the pharmacovigilance safety desk?</div>
+    <div class="model-a">Within 24 hours of initial site awareness, via the eCRF safety portal, to the central Pharmacovigilance Safety Desk. This applies whether or not the event is considered drug-related.
+Source: Page 28, Section 7.3.</div>
+  </div>
+
+  <div class="qa-card refusal">
+    <div class="qa-title">
+      <span>Question 3: Commercial Pharmacy Price (Negative Guardrail Test)</span>
+      <span class="badge badge-refusal">Refusal Pass</span>
+    </div>
+    <div class="user-q">What is the wholesale or retail price of CardioVex in commercial pharmacies?</div>
+    <div class="model-a">This information is not available in the CardioVex (CVX-409) Phase-3 protocol provided, so I cannot answer it from this document. The protocol covers eligibility, procedures, SAE reporting and storage, but not commercial pricing. Please contact the sponsor.</div>
+  </div>
+
+  <div class="qa-card">
+    <div class="qa-title">
+      <span>Question 4: Investigational Product Cold-Chain Storage</span>
+      <span class="badge badge-success">Grounded Pass</span>
+    </div>
+    <div class="user-q">Within what exact temperature range, in degrees Celsius, must reconstituted CardioVex vials be stored before administration?</div>
+    <div class="model-a">Reconstituted vials must be stored strictly between 2°C and 8°C in a calibrated refrigerator with continuous temperature logging. Do not freeze.
+Source: Page 42, Section 10.2.</div>
+  </div>
+
+  <div class="qa-card refusal">
+    <div class="qa-title">
+      <span>Question 5: Unrelated Paediatric Drug Dosing (Negative Guardrail Test)</span>
+      <span class="badge badge-refusal">Refusal Pass</span>
+    </div>
+    <div class="user-q">What is the standard recommended dosage of amoxicillin for treating a paediatric ear infection?</div>
+    <div class="model-a">This information is not available in the CardioVex (CVX-409) Phase-3 protocol provided, so I cannot answer it from this document. Amoxicillin is unrelated to this trial. Please consult a pediatrician or pharmacist for dosing.</div>
+  </div>
+
+  <h2>4. Architecture & RAG Pipeline Design</h2>
+  <p>The system utilizes a 3-stage RAG architecture designed to counter high-volume boilerplate pollution:</p>
+  <ul>
+    <li><strong>Page-Level Chunking:</strong> Preserves atomic regulatory sections without splitting clinical thresholds across arbitrary chunk boundaries.</li>
+    <li><strong>Boilerplate Filtering & Boosting:</strong> Penalizes repeating template phrases (Reference Clauses 1.1, 1.2, 1.3) and applies a +0.35 semantic boost to chunks containing <code>Operational Compliance Note</code> and numeric medical units.</li>
+    <li><strong>Strict Grounding Guardrails:</strong> Pre-programmed out-of-scope classifier and explicit few-shot conditioning prevents hallucination of off-protocol facts and unauthorized medical guidance.</li>
+  </ul>
+</div>
+</body>
+</html>
